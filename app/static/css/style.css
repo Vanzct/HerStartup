@@ -1,0 +1,213 @@
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-family: "微软雅黑", monospace;
+}
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+p, h1, h2, h4, h5, a, span{
+    padding: 0px;
+    margin: 0px;
+    color: #444;
+}
+
+.nav{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    //box-shadow: 0px 1px 2px #AAA;
+    border-bottom: solid 1px #eee;
+    padding: 20px 10%;
+}
+.nav .logo{
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    background-size: 100%;
+    background-image: url('/static/img/icons/logo2.png');
+
+}
+
+.nav_content{
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    width: 60%;
+    padding: 40px;
+    text-align: right;
+}
+
+.nav ul, .content ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul a{
+    font-size: 1.2em;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+.nav ul .selected{
+    background: #DC1A1A;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    padding:30px 10%;
+}
+.content h1{
+    font-size: 2.0em;
+    margin-bottom: 40px;
+}
+.content .p_title{
+    color: #DC1A1A;
+    margin: 10px 0px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.content .desc{
+    margin: 10px 0px;
+    font-size: 1.1em;
+}
+
+/****************************************
+
+  右侧导航
+
+*****************************************/
+.content .sub_nav{
+    position: fixed;
+    top: 180px;
+    right: 5%;
+}
+
+.content .sub_nav .nav_item{
+    text-align: center;
+    padding: 30px;
+}
+
+.content .sub_nav .nav_item a{
+    display: inline-block;
+    width: 100%;
+    background: #eee;
+    padding: 10px;
+}
+
+.content .sub_nav .nav_item .selected{
+    border-bottom: solid 1px #DC1A1A;
+    color: #DC1A1A;
+    background-color: #FaFaFa;
+}
+
+.section_li{
+    margin: 50px 0px;
+}
+.section_title{
+    color: #DC1A1A;
+    margin: 10px 0px;
+    margin-top: 20px;
+    font-size: 1.5em;
+    padding: 10px 0px;
+    width: 90%;
+    //border-bottom: solid 1px #ccc;
+}
+/****************************************
+
+  评委
+
+*****************************************/
+
+.woman{
+    position: relative;
+    display: inline-block;
+    width: 18%;
+    //height: 220px;
+    margin: 10px;
+    background: #Fafafc;
+    padding-bottom: 40px;
+    box-shadow: 0px 0px 2px #eee;
+}
+.woman:nth-child(odd){
+    top: 0px;
+}
+.woman .head_img{
+    width: 100%;
+
+}
+.woman .name{
+    margin: 10px 0px;
+    padding-left: 5px;
+}
+.woman p{
+    font-size: 12px;
+    position: absolute;
+    display: block;
+    width: 90%;
+    left: 5px;
+}
+
+
+.img_section{
+    text-align: center;
+
+}
+.img_section img{
+    width: 60%;
+}
+
+
+/****************************************
+
+  表单
+
+*****************************************/
+#page_us{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+
+form{
+    position: relative;
+    left: 20%;
+    width: 50%;
+    text-align: left;
+}
+
+input, textarea{
+    width: 100%;
+    display: block;
+    border: solid 1px #eee;
+    margin: 5px 0px 20px;
+    padding: 10px;
+}
