@@ -13,6 +13,7 @@ html * {
 html, body{
     padding: 0px;
     margin: 0px;
+    padding-bottom: 100px;
 }
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -29,6 +30,19 @@ p, h1, h2, h4, h5, a, span{
     color: #444;
 }
 
+#language{
+    position: fixed;
+    top: 220px;
+    right: 10px;
+}
+#language a{
+    display: block;
+    background: #eee;
+    width: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
 .nav{
     position: relative;
     height: 100px;
@@ -39,18 +53,32 @@ p, h1, h2, h4, h5, a, span{
 }
 .nav .logo{
     display: inline-block;
-    width: 250px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-size: 100%;
-    background-image: url('/static/img/icons/logo2.png');
+}
 
+.nav .techbase{
+    background-image: url('/static/img/logos/techbase.jpg');
+}
+
+.nav .leanin{
+    background-image: url('/static/img/logos/leanin.jpg');
+}
+
+.nav .sogal{
+    background-image: url('/static/img/logos/sogal.jpg');
+}
+
+.nav .krspace{
+    background-image: url('/static/img/logos/krspace.jpg');
 }
 
 .nav_content{
     position: absolute;
     top: 0px;
-    right: 10%;
-    width: 60%;
+    right: 5%;
+    width: 70%;
     padding: 40px;
     text-align: right;
 }
@@ -71,6 +99,12 @@ p, h1, h2, h4, h5, a, span{
     padding: 10px 15px;
 }
 
+.nav ul a:hover{
+    //color: #DC1A1A;
+    border: solid 1px #DC1A1A;
+    box-shadow: 1px 1px 3px #ccc;
+    border-radius: 3px;
+}
 .nav ul .selected{
     background: #DC1A1A;
     border-radius: 3px;
@@ -128,7 +162,7 @@ p, h1, h2, h4, h5, a, span{
     background-color: #FaFaFa;
 }
 
-.section_li{
+.section_line{
     margin: 50px 0px;
 }
 .section_title{
@@ -140,13 +174,27 @@ p, h1, h2, h4, h5, a, span{
     width: 90%;
     //border-bottom: solid 1px #ccc;
 }
+
+.review_rule .title{
+    color: #DC1A1A;
+    font-size: 1.2em;
+}
+
+.review_rule .desc{
+    font-size: 1em;
+}
+
+.partner_img{
+    max-width: 100%;
+    width: 90%;
+}
 /****************************************
 
   评委
 
 *****************************************/
 
-.woman{
+.user{
     position: relative;
     display: inline-block;
     width: 18%;
@@ -156,18 +204,18 @@ p, h1, h2, h4, h5, a, span{
     padding-bottom: 40px;
     box-shadow: 0px 0px 2px #eee;
 }
-.woman:nth-child(odd){
+.user:nth-child(odd){
     top: 0px;
 }
-.woman .head_img{
+.user .head_img{
     width: 100%;
 
 }
-.woman .name{
+.user .name{
     margin: 10px 0px;
     padding-left: 5px;
 }
-.woman p{
+.user .desc{
     font-size: 12px;
     position: absolute;
     display: block;
@@ -181,33 +229,223 @@ p, h1, h2, h4, h5, a, span{
 
 }
 .img_section img{
-    width: 60%;
+    width: 100%;
+}
+
+.us_desc{
+    text-align: left;
+    line-height: 1.3em;
+    padding: 30px;
+    background: #eee;
 }
 
 
-/****************************************
+.join{
 
-  表单
-
-*****************************************/
-#page_us{
-    position: relative;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
     width: 100%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    padding-left: 10%;
+}
+
+.join .join_btn{
+    color: #fff;
+    background: #DC1A1A;
+    padding: 12px 50px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.join span{
+    color: #fff;
+}
+.join .close{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+}
+.join img{
+    width: 20px;
+}
+
+.mail_us{
+    text-align: center;
+    padding: 30px;
+}
+
+.mail_us .tip2{
+    font-size: 24px;
+    color: #DC1A1A;
+    margin-bottom: 30px;
+}
+
+.wx li{
+    display: inline-block;
+    width: 23.5%;
     text-align: center;
 }
-
-
-form{
-    position: relative;
-    left: 20%;
-    width: 50%;
-    text-align: left;
+.wx li img{
+    width: 100%;
 }
 
-input, textarea{
-    width: 100%;
-    display: block;
-    border: solid 1px #eee;
-    margin: 5px 0px 20px;
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+#timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  margin-left: -2px;
+  background: #DC1A1A;
+}
+#timeline {
+    position: relative;
+    padding: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+#timeline  .item{
+  position: relative;
+  margin: .5em 0;
+}
+
+
+#timeline .item:nth-child(odd) .datetime{
+    position: absolute;
+    top: 10px;
+    right: 51%;
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+#timeline .item:nth-child(even) .datetime{
+    position: absolute;
+    top: 10px;
+    left: 51%;
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+#timeline  .item:nth-child(odd) .content {
+    position: relative;
+    margin-left: 50%;
+    padding: 1em;
+}
+#timeline  .item:nth-child(even) .content {
+    position: relative;
+    left: -2px;
+}
+#timeline .content{
+    background: #eee;
+    width: 50%;
+}
+#timeline .name{
+    text-align: center;
+    font-size: 18px;
+}
+#timeline .content img{
+    width: 80%;
+    margin: 10%;
+}
+
+#timeline .content p, #timeline .content li{
     padding: 10px;
 }
+
+
+.logo-line{
+    text-align: center;
+
+}
+
+.logo-line .logo{
+    z-index: 10;
+    /* position: absolute; */
+    display: inline-block;
+    top: 0;
+    left: 47%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #DC1A1A;
+    margin-left: -3px;
+}
+
+
+
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .cssanimations .cd-timeline-img.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations .cd-timeline-img.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-1 0.6s;
+    -moz-animation: cd-bounce-1 0.6s;
+    animation: cd-bounce-1 0.6s;
+  }
+}
+
+
+@media only screen and (min-width: 1170px) {
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: #333;
+    border-right-color: white;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+  .cssanimations .cd-timeline-content.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations .cd-timeline-content.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-2 0.6s;
+    -moz-animation: cd-bounce-2 0.6s;
+    animation: cd-bounce-2 0.6s;
+  }
+}
+
+//@media only screen and (min-width: 1170px) {
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+    -webkit-animation: cd-bounce-2-inverse 0.6s;
+    -moz-animation: cd-bounce-2-inverse 0.6s;
+    animation: cd-bounce-2-inverse 0.6s;
+  }
+//}
+

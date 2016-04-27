@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>大赛</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="nav">
+        <a class="logos">
+            <span class="techbase logo"></span>
+            <span class="sogal logo"></span>
+            <span class="leanin logo"></span>
+            <span class="krspace logo"></span>
+        </a>
+        <article class="nav_content">
+            <ul>
+                <li><a href="/organizer">{{data.nav.organizer}}</a></li>
+                <li><a href="/partner">{{data.nav.partner}}</a></li>
+                <li><a href="/">{{data.nav.home}}</a></li>
+                <li><a href="/schedule" class="selected">{{data.nav.schedule}}</a></li>
+                <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
+                <li><a href="/us">{{data.nav.us}}</a></li>
+            </ul>
+        </article>
+    </section>
+    <section class="content" id="page_match">
+
+        <section id="timeline" class="cd-container">
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">
+                    5月18日前
+                </a>
+                <div class="content">
+                    <h5 class="name">报名、材料提交<br>BO初轮筛选</h5>
+
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">6月6日</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">中国、美国初轮面试</h5>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">6月18日</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">中国场决赛</h5>
+                    </div>
+                    <h4 class="title">决赛流程</h4>
+                    <ul>
+                        <li>13:30-14:00 开幕演讲</li>
+                        <li>14:00-15:30 第一环节展示</li>
+                        <li>15:30-17:00 第二环节展示</li>
+                        <li>17:00-17:30 第三环节展示</li>
+                        <li>17:30-18:00 闭幕式</li>
+                        <li>18:00-20:00 交流派对</li>
+                    </ul>
+                    <p>每5个创业团队为一个展示环节,10分钟评委问答点评,80分钟5个团队展示完毕,10分钟休息时间</p>
+
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+
+                <a class="datetime">6月XX日(未确定)</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">美国场决赛</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">7月18日 - 7月19日</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">赴美国集中培训</h5>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>第一天</p>
+                            <p class="">
+                                <span class="am_pm">上午</span>
+                                <span class="action">主题演讲: 为什么创业？</span>
+                            </p>
+                            <p class="">
+                                <span class="am_pm">下午</span>
+                                <span class="action">与嘉宾分组互动</span>
+                            </p>
+
+                        </li>
+                        <li>
+                            <p>第二天</p>
+                            <p class="leflf">
+                                <span class="am_pm">上午</span>
+                                <span class="action">商业快速增长法则</span>
+                            </p>
+                            <p class="righ">
+                                <span class="am_pm">下午</span>
+                                <span class="action">独角兽是如何炼成的</span>
+                            </p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">7月20日</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">总决赛</h5>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">7月21日 - 7月22日</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">参观硅谷创业区</h5>
+                        <img class="" src="/static/img/schedule/guigu.jpg">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+</html>

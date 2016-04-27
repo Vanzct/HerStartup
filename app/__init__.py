@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 __author__ = 'Van.zx'
 
-from flask import Flask, jsonify, render_template
+from flask import Flask, request, render_template
 # from flask.ext.cache import Cache
 # from flask.ext.bootstrap import Bootstrap
 # from flask.ext.mail import Mail
@@ -9,7 +9,6 @@ from flask import Flask, jsonify, render_template
 # from flask.ext.sqlalchemy import SQLAlchemy
 # from config import config_dict
 import mongo
-
 import sys
 
 import logging
@@ -19,6 +18,9 @@ from logging.handlers import RotatingFileHandler
 # moment = Moment()
 # db = SQLAlchemy()
 # convert python's encoding to utf8
+
+from en import data as data_en
+from zh import data as data_zh
 try:
     from imp import reload
     reload(sys)
@@ -76,25 +78,55 @@ def create_app(config_mode):
     @app.route('/index', methods=['GET'])
     @app.route('/', methods=['GET'])
     def index():
-        return render_template("index.html")
+        lan = request.cookies.get("language", "zh")
+        if lan == "zh":
+            data = data_zh
+        else:
+            data = data_en
+        return render_template("index.html", data=data)
 
-    @app.route('/owner', methods=['GET'])
+    @app.route('/organizer', methods=['GET'])
     def owner():
-        return render_template("owner.html")  # cooperate
+        lan = request.cookies.get("language", "zh")
+        if lan == "zh":
+            data = data_zh
+        else:
+            data = data_en
+        return render_template("organizer.html", data=data)  # cooperate
 
-    @app.route('/cooperator', methods=['GET'])
-    def cooperator():
-        return render_template("cooperator.html")  # cooperate
+    @app.route('/partner', methods=['GET'])
+    def partner():
+        lan = request.cookies.get("language", "zh")
+        if lan == "zh":
+            data = data_zh
+        else:
+            data = data_en
+        return render_template("partner.html", data=data)  # cooperate
 
-    @app.route('/flow', methods=['GET'])
-    def flow():
-        return render_template("flow.html")
+    @app.route('/schedule', methods=['GET'])
+    def schedule():
+        lan = request.cookies.get("language", "zh")
+        if lan == "zh":
+            data = data_zh
+        else:
+            data = data_en
+        return render_template("schedule.html", data=data)
 
     @app.route('/sponsor', methods=['GET'])
     def sponsor():
-        return render_template("sponsor.html")
+        lan = request.cookies.get("language", "zh")
+        if lan == "zh":
+            data = data_zh
+        else:
+            data = data_en
+        return render_template("sponsor.html", data=data)
 
-    @app.route('/contact_us', methods=['GET'])
+    @app.route('/us', methods=['GET'])
     def contact_us():
-        return render_template("contact_us.html")
+        lan = request.cookies.get("language", "zh")
+        if lan == "zh":
+            data = data_zh
+        else:
+            data = data_en
+        return render_template("us.html", data=data)
     return app
