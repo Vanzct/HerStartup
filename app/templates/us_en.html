@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>About us</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="nav">
+        <a class="logos">
+            <span class="techbase logo"></span>
+            <span class="sogal logo"></span>
+            <span class="leanin logo"></span>
+            <span class="krspace logo"></span>
+        </a>
+        <article class="nav_content">
+            <ul>
+                <li><a href="/organizer">{{data.nav.organizer}}</a></li>
+                <li><a href="/partner">{{data.nav.partner}}</a></li>
+                <li><a href="/">{{data.nav.home}}</a></li>
+                <li><a href="/schedule">{{data.nav.schedule}}</a></li>
+                <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
+                <li><a href="/us" class="selected">{{data.nav.us}}</a></li>
+            </ul>
+        </article>
+    </section>
+    <div class="content" id="page_us">
+        <p class="us_desc">On July 20, 2016, TechBase, SoGal， Lean In China and Krspace, are proud to 
+		jointly host the Her Startup Competition to showcase the creativity and strength of female entrepreneurs. 
+		Outstanding startups will be selected to receive support through funding, cross-border education resources, 
+		and access to further business development opportunities in order to promote the attainment of entrepreneurial 
+		success.</p>
+		<p class="us_desc">If you are selected, you will be invited to participate in an entire week of events relating 
+		to Her Startup in US commencing July 18 to July 22 including an intensive pre-competition bootcamp and a tour of 
+		major Silicon Valley tech companies with the final competition held on July 20, 2016.Apart from our authority experts, 
+		our bootcamp will create for participants’ authentic experience of the entrepreneurial culture of Silicon Valley, 
+		of which our educational Partners include Stanford Graduate School of Business, Draper University, Y Combinator and 
+		500 Startups. </p>
+        <!--<section class="section_line">-->
+            <!--<h4 class="section_title">往期回顾</h4>-->
+            <!---->
+        <!--</section>-->
+        <section class="mail_us">
+            <p>If there are any questions or suggestions, please send your email to </p>
+            <p class="tip2">herstartup@aliyun.com</p>
+            <p>Or contact our customer service Miss Tech weChat</p>
+            <img src="/static/img/wx/miss_tech.jpg">
+            <p class="tip2">tabenying</p>
+        </section>
+        <section class="wx">
+            <h4 class="section_title1">Contact the organizers ( weChat )</h4>
+            <ul>
+                <li class="techbase">
+                    <img src="/static/img/wx/techbase.jpg">
+                    <p>TechBase</p>
+                </li>
+                <li>
+                    <img src="/static/img/wx/lean_in_china.jpg">
+                    <p>Lean In Beijing</p>
+                </li>
+                <li>
+                    <img src="/static/img/wx/sogal.jpg">
+                    <p>SoGal</p>
+                </li>
+                <li>
+                    <img src="/static/img/wx/krspace.png">
+                    <p>Krspace</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

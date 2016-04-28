@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Her Startup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="nav">
+        <a class="logos">
+            <span class="techbase logo"></span>
+            <span class="sogal logo"></span>
+            <span class="leanin logo"></span>
+            <span class="krspace logo"></span>
+        </a>
+        <article class="nav_content">
+            <ul>
+                <li><a href="/organizer">{{data.nav.organizer}}</a></li>
+                <li><a href="/partner">{{data.nav.partner}}</a></li>
+                <li><a href="/" class="selected">{{data.nav.home}}</a></li>
+                <li><a href="/schedule">{{data.nav.schedule}}</a></li>
+                <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
+                <li><a href="/us">{{data.nav.us}}</a></li>
+            </ul>
+            <p id="language">
+                <a id="zh">中文</a>
+                <a id="en">English</a>
+            </p>
+
+        </article>
+    </section>
+    <div class="content" id="page_review">
+        <!--<aside class="sub_nav">-->
+            <!--<ul>-->
+                <!--<li class="nav_item"><a href="/" class="selected">赛制</a></li>-->
+                <!--<li class="nav_item"><a href="/" >评委</a></li>-->
+                <!--<li class="nav_item"><a href="/">拟邀嘉宾</a></li>-->
+            <!--</ul>-->
+            <!--<div class="just_aline"></div>-->
+        <!--</aside>-->
+
+        <section class="review_rule">
+            <h4 class="section_title">{{data.review_page.title1}}</h4>
+            {% for p in data.review_page.review %}
+                <h4 class="title">{{p.title}}</h4>
+                <p class="desc">{{p.desc}}</p>
+            {% endfor %}
+
+            <h4 class="title">{{data.review_page.reward.title}}</h4>
+            {% for p in data.review_page.reward.list %}
+                <p class="desc">{{p}}</p>
+            {% endfor %}
+        </section>
+        <section class="section_line">
+            <h4 class="section_title">{{data.review_page.china_guests_title}}</h4>
+            <ul>
+                {% for judge in data.review_page.china_guests %}
+                <li class="user">
+                    <img class="head_img" src="/static/img/china_guests/{{judge.head_img}}">
+                    <h5 class="name">{{judge.name}}</h5>
+                    <p class="desc">{{judge.desc}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="section_line">
+            <h4 class="section_title">{{data.review_page.china_judges_title}}</h4>
+            <ul>
+                {% for judge in data.review_page.china_judges %}
+                <li class="user">
+                    <img class="head_img" src="/static/img/judges/{{judge.head_img}}">
+                    <h5 class="name">{{judge.name}}</h5>
+                    <p class="desc">{{judge.desc}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="section_line">
+            <h4 class="section_title">{{data.review_page.world_guests_title}}</h4>
+            <ul>
+                {% for judge in data.review_page.world_guests %}
+                <li class="user">
+                    <img class="head_img" src="/static/img/world_guests/{{judge.head_img}}">
+                    <h5 class="name">{{judge.name}}</h5>
+                    <!--<p class="desc">{{judge.desc}}</p>-->
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+
+    <div class="join">
+        <a class="join_btn" href="http://form.mikecrm.com/13Eqhd#rd">Apply</a>
+        <span>Please sigh up before May 18,2016</span>
+        <a class="close"><img src="/static/img/icons/close.png"></a>
+    </div>
+</body>
+</html>

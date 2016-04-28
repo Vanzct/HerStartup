@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sponsor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="nav">
+        <a class="logos">
+            <span class="techbase logo"></span>
+            <span class="sogal logo"></span>
+            <span class="leanin logo"></span>
+            <span class="krspace logo"></span>
+        </a>
+        <article class="nav_content">
+            <ul>
+                <li><a href="/organizer">{{data.nav.organizer}}</a></li>
+                <li><a href="/partner">{{data.nav.partner}}</a></li>
+                <li><a href="/">{{data.nav.home}}</a></li>
+                <li><a href="/schedule" >{{data.nav.schedule}}</a></li>
+                <li><a href="/sponsor" class="selected">{{data.nav.sponsor}}</a></li>
+                <li><a href="/us">{{data.nav.us}}</a></li>
+            </ul>
+        </article>
+    </section>
+    <div class="content" id="page_match">
+
+        <section class="section_line">
+            <h4 class="section_title">Title Sponsor  500,000 RMB</h4>
+            <p class="desc">1. Competition naming rights, e.g. “[Insert Your Brand] Her Startup Competition”</p>
+            <p class="desc">2. Key logo on all publicity materials and boards at each stage of the competition and preceding bootcamps</p>
+            <p class="desc">3. Ability for sponsor to participate in Silicon Valley visit</p>
+            <p class="desc">4. Specialized media coverage (all social media publicity will include branding message of company)</p>
+            <p class="desc">5. Opening address from head of company at event (or video message in lieu) and product booth</p>
+            <p class="desc">6. Right to contribute prizes for winners of competition</p>
+            <p class="desc">7. Right to contribute items in goodie bags for all participants, judges and audience</p>
+        </section>
+
+       <section class="section_line">
+            <h4 class="section_title">Gold Sponsor  200,000 RMB</h4>
+            <p class="desc">1. Logo on all publicity materials and boards on day of competition</p>
+            <p class="desc">2. Ability for sponsor to participate in Silicon Valley visit</p>
+            <p class="desc">3. General media coverage</p>
+            <p class="desc">4. One promotional message to be announced during competition</p>
+            <p class="desc">5. 05  Right to contribute prizes for winners of competition</p>
+            <p class="desc">6. Right to contribute items in goodie bags for all participants, judges and audience</p>
+        </section>
+
+        <section class="section_line">
+            <h4 class="section_title">Standard Sponsor  100,000 RMB</h4>
+            <p class="desc">1. Logo on all publicity materials and boards on day of competition</p>
+            <p class="desc">2. General media coverage</p>
+            <p class="desc">3. Right to contribute items in goodie bags for all participants, judges and audience</p>
+        </section>
+    </div>
+
+</body>
+</html>

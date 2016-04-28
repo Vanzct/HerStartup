@@ -79,20 +79,21 @@ def create_app(config_mode):
     @app.route('/', methods=['GET'])
     def index():
         lan = request.cookies.get("language", "zh")
-        if lan == "zh":
-            data = data_zh
-        else:
+        if lan == "en":
             data = data_en
-        return render_template("index.html", data=data)
-
+			return render_template("index_en.html", data=data)
+        else:
+            data = data_zh
+			return render_template("index.html", data=data)
+        
     @app.route('/organizer', methods=['GET'])
     def owner():
         lan = request.cookies.get("language", "zh")
-        if lan == "zh":
-            data = data_zh
-        else:
+        if lan == "en":
             data = data_en
-        return render_template("organizer.html", data=data)  # cooperate
+        else:
+            data = data_zh
+		return render_template("organizer.html", data=data)  # cooperate
 
     @app.route('/partner', methods=['GET'])
     def partner():
@@ -106,27 +107,31 @@ def create_app(config_mode):
     @app.route('/schedule', methods=['GET'])
     def schedule():
         lan = request.cookies.get("language", "zh")
-        if lan == "zh":
-            data = data_zh
-        else:
+        if lan == "en":
             data = data_en
-        return render_template("schedule.html", data=data)
+		    return render_template("schedule_en.html", data=data)
+        else:
+            data = data_zh
+		    return render_template("schedule.html", data=data)
 
     @app.route('/sponsor', methods=['GET'])
     def sponsor():
         lan = request.cookies.get("language", "zh")
-        if lan == "zh":
-            data = data_zh
-        else:
+        if lan == "en":
             data = data_en
-        return render_template("sponsor.html", data=data)
+			return render_template("sponsor_en.html", data=data)
+        else:
+            data = data_zh
+			return render_template("sponsor.html", data=data)
+        
 
     @app.route('/us', methods=['GET'])
     def contact_us():
         lan = request.cookies.get("language", "zh")
-        if lan == "zh":
-            data = data_zh
-        else:
+        if lan == "en":
             data = data_en
-        return render_template("us.html", data=data)
+			return render_template("us_en.html", data=data)
+        else:
+            data = data_zh
+            return render_template("us.html", data=data)
     return app
