@@ -9,6 +9,8 @@ data = {
         "us": "ABOUT US",
         "partner": "PARTNERS",
     },
+    "join_btn": "Apply",
+    "join_tip": "Please sigh up before May 18,2016",
     "partner_page": {
         "strategic_partner_title": "Strategic partners",
         "company_partner_title": "Commercial partners",

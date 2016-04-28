@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 __author__ = 'Van.zx'
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, make_response
 # from flask.ext.cache import Cache
 # from flask.ext.bootstrap import Bootstrap
 # from flask.ext.mail import Mail
@@ -78,60 +78,55 @@ def create_app(config_mode):
     @app.route('/index', methods=['GET'])
     @app.route('/', methods=['GET'])
     def index():
-        lan = request.cookies.get("language", "zh")
+        print request.args.get("language")
+        lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            data = data_en
-			return render_template("index_en.html", data=data)
+            resp = make_response(render_template("index.html", data=data_en))
+            resp.set_cookie('language', 'en')
+            return resp
         else:
-            data = data_zh
-			return render_template("index.html", data=data)
+            resp = make_response(render_template("index.html", data=data_zh))
+            resp.set_cookie('language', 'zh')
+            return resp
         
     @app.route('/organizer', methods=['GET'])
     def owner():
-        lan = request.cookies.get("language", "zh")
+        lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
             data = data_en
         else:
             data = data_zh
-		return render_template("organizer.html", data=data)  # cooperate
+        return render_template("organizer.html", data=data)  # cooperate
 
     @app.route('/partner', methods=['GET'])
     def partner():
-        lan = request.cookies.get("language", "zh")
+        lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "zh":
-            data = data_zh
+            return render_template("partner.html", data=data_zh)
         else:
-            data = data_en
-        return render_template("partner.html", data=data)  # cooperate
+            return render_template("partner.html", data=data_en)  # cooperate
 
     @app.route('/schedule', methods=['GET'])
     def schedule():
-        lan = request.cookies.get("language", "zh")
+        lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            data = data_en
-		    return render_template("schedule_en.html", data=data)
+            return render_template("schedule_en.html", data=data_en)
         else:
-            data = data_zh
-		    return render_template("schedule.html", data=data)
+            return render_template("schedule.html", data=data_zh)
 
     @app.route('/sponsor', methods=['GET'])
     def sponsor():
-        lan = request.cookies.get("language", "zh")
+        lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            data = data_en
-			return render_template("sponsor_en.html", data=data)
+            return render_template("sponsor_en.html", data=data_en)
         else:
-            data = data_zh
-			return render_template("sponsor.html", data=data)
-        
+            return render_template("sponsor.html", data=data_zh)
 
     @app.route('/us', methods=['GET'])
     def contact_us():
-        lan = request.cookies.get("language", "zh")
+        lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            data = data_en
-			return render_template("us_en.html", data=data)
+            return render_template("us_en.html", data=data_en)
         else:
-            data = data_zh
-            return render_template("us.html", data=data)
+            return render_template("us.html", data=data_zh)
     return app
