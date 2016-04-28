@@ -8,7 +8,6 @@ from flask import Flask, request, render_template, make_response
 # from flask.ext.moment import Moment
 # from flask.ext.sqlalchemy import SQLAlchemy
 # from config import config_dict
-import mongo
 import sys
 
 import logging
