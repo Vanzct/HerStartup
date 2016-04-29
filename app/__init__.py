@@ -73,11 +73,8 @@ def create_app(config_mode):
     # from apps.routes import main
     # app.register_blueprint(main)
 
-    @app.route('/home', methods=['GET'])
-    @app.route('/index', methods=['GET'])
-    @app.route('/', methods=['GET'])
-    def index():
-        print request.args.get("language")
+    @app.route('/review', methods=['GET'])
+    def review():
         lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
             resp = make_response(render_template("index.html", data=data_en))
@@ -87,45 +84,69 @@ def create_app(config_mode):
             resp = make_response(render_template("index.html", data=data_zh))
             resp.set_cookie('language', 'zh')
             return resp
-        
+
+    @app.route('/', methods=['GET'])
     @app.route('/organizer', methods=['GET'])
     def owner():
+
         lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            data = data_en
+            resp = make_response(render_template("organizer.html", data=data_en))
+            resp.set_cookie('language', 'en')
+            return resp
         else:
-            data = data_zh
-        return render_template("organizer.html", data=data)  # cooperate
+            resp = make_response(render_template("organizer.html", data=data_zh))
+            resp.set_cookie('language', 'zh')
+            return resp
 
     @app.route('/partner', methods=['GET'])
     def partner():
         lan = request.args.get("language") or request.cookies.get("language", "zh")
-        if lan == "zh":
-            return render_template("partner.html", data=data_zh)
+        if lan == "en":
+            resp = make_response(render_template("partner.html", data=data_en))
+            resp.set_cookie('language', 'en')
+            return resp
         else:
-            return render_template("partner.html", data=data_en)  # cooperate
+            resp = make_response(render_template("partner.html", data=data_zh))
+            resp.set_cookie('language', 'zh')
+            return resp
 
     @app.route('/schedule', methods=['GET'])
     def schedule():
+
         lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            return render_template("schedule_en.html", data=data_en)
+            resp = make_response(render_template("schedule_en.html", data=data_en))
+            resp.set_cookie('language', 'en')
+            return resp
         else:
-            return render_template("schedule.html", data=data_zh)
+            resp = make_response(render_template("schedule.html", data=data_zh))
+            resp.set_cookie('language', 'zh')
+            return resp
 
     @app.route('/sponsor', methods=['GET'])
     def sponsor():
+
         lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            return render_template("sponsor_en.html", data=data_en)
+            resp = make_response(render_template("sponsor_en.html", data=data_en))
+            resp.set_cookie('language', 'en')
+            return resp
         else:
-            return render_template("sponsor.html", data=data_zh)
+            resp = make_response(render_template("sponsor.html", data=data_zh))
+            resp.set_cookie('language', 'zh')
+            return resp
 
     @app.route('/us', methods=['GET'])
     def contact_us():
+
         lan = request.args.get("language") or request.cookies.get("language", "zh")
         if lan == "en":
-            return render_template("us_en.html", data=data_en)
+            resp = make_response(render_template("us_en.html", data=data_en))
+            resp.set_cookie('language', 'en')
+            return resp
         else:
-            return render_template("us.html", data=data_zh)
+            resp = make_response(render_template("us.html", data=data_zh))
+            resp.set_cookie('language', 'zh')
+            return resp
     return app

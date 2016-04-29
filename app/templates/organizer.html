@@ -17,22 +17,28 @@
             <ul>
                 <li><a href="/organizer" class="selected">{{data.nav.organizer}}</a></li>
                 <li><a href="/partner">{{data.nav.partner}}</a></li>
-                <li><a href="/">{{data.nav.home}}</a></li>
+                <li><a href="/review">{{data.nav.home}}</a></li>
                 <li><a href="/schedule">{{data.nav.schedule}}</a></li>
                 <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
                 <li><a href="/us">{{data.nav.us}}</a></li>
             </ul>
         </article>
+        <div id="language">
+            <p><a id="zh" href="/organizer?organizer=zh">中文</a></p>
+            <p><a id="en" href="/organizer?organizer=en">English</a></p>
+        </div>
     </section>
     <section class="content" id="organizer_page">
         <header class="img_section">
             <img src="/static/img/main.jpg">
+            <p class="desc">{{data.organizer_desc}}</p>
         </header>
         <article>
             <ul>
                 {% for org in data.organizer_list %}
                 <li class="section_li">
-                    <h4 class="section_title">{{org.name}}</h4>
+                    <img class="logo" src="/static/img/logos/{{org.logo}}">
+                    <h4 class="org_name section_title">{{org.name}}</h4>
                     <p class="desc">{{org.desc}}</p>
                 </li>
                 {% endfor %}

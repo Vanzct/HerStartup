@@ -52,13 +52,14 @@ p, h1, h2, h4, h5, a, span{
     border-bottom: solid 1px #eee;
     padding: 20px 10%;
 }
-.nav .logo{
+.nav .logos{
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 100px;
     background-size: 100%;
+    background-image: url('/static/img/logo.jpg');
 }
-
+/*
 .nav .techbase{
     background-image: url('/static/img/logos/techbase.jpg');
 }
@@ -74,6 +75,7 @@ p, h1, h2, h4, h5, a, span{
 .nav .krspace{
     background-image: url('/static/img/logos/krspace.jpg');
 }
+*/
 
 .nav_content{
     position: absolute;
@@ -188,7 +190,10 @@ p, h1, h2, h4, h5, a, span{
 
 .partner_img{
     max-width: 100%;
-    width: 90%;
+    position: relative;
+    max-width: 100%;
+    width: 80%;
+    left: 10%;
 }
 /****************************************
 
@@ -225,15 +230,31 @@ p, h1, h2, h4, h5, a, span{
     left: 5px;
 }
 
-
+.section_li{
+    position: relative;
+}
+.section_li .logo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+ }
+.section_li .org_name{
+    padding-left: 60px;
+}
 .img_section{
     text-align: center;
 
 }
 .img_section img{
-    width: 100%;
+    width: 60%;
 }
-
+.img_section .desc{
+    text-align: left;
+    box-shadow: 0px 1px 5px #ddd;
+    padding: 5px 10px;
+    margin: 20px 0px;
+}
 .us_desc{
     text-align: left;
     line-height: 1.3em;

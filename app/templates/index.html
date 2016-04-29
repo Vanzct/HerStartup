@@ -18,14 +18,14 @@
             <ul>
                 <li><a href="/organizer">{{data.nav.organizer}}</a></li>
                 <li><a href="/partner">{{data.nav.partner}}</a></li>
-                <li><a href="/" class="selected">{{data.nav.home}}</a></li>
+                <li><a href="/review" class="selected">{{data.nav.home}}</a></li>
                 <li><a href="/schedule">{{data.nav.schedule}}</a></li>
                 <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
                 <li><a href="/us">{{data.nav.us}}</a></li>
             </ul>
             <div id="language">
-                <p><a id="zh" href="/?language=zh">中文</a></p>
-                <p><a id="en" href="/?language=en">English</a></p>
+                <p><a id="zh" href="/review?language=zh">中文</a></p>
+                <p><a id="en" href="/review?language=en">English</a></p>
             </div>
 
         </article>
@@ -52,18 +52,18 @@
                 <p class="desc">{{p}}</p>
             {% endfor %}
         </section>
-        <section class="section_line">
-            <h4 class="section_title">{{data.review_page.china_guests_title}}</h4>
-            <ul>
-                {% for judge in data.review_page.china_guests %}
-                <li class="user">
-                    <img class="head_img" src="/static/img/china_guests/{{judge.head_img}}">
-                    <h5 class="name">{{judge.name}}</h5>
-                    <p class="desc">{{judge.desc}}</p>
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
+        <!--<section class="section_line">-->
+            <!--<h4 class="section_title">{{data.review_page.china_guests_title}}</h4>-->
+            <!--<ul>-->
+                <!--{% for judge in data.review_page.china_guests %}-->
+                <!--<li class="user">-->
+                    <!--<img class="head_img" src="/static/img/china_guests/{{judge.head_img}}">-->
+                    <!--<h5 class="name">{{judge.name}}</h5>-->
+                    <!--<p class="desc">{{judge.desc}}</p>-->
+                <!--</li>-->
+                <!--{% endfor %}-->
+            <!--</ul>-->
+        <!--</section>-->
         <section class="section_line">
             <h4 class="section_title">{{data.review_page.china_judges_title}}</h4>
             <ul>

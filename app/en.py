@@ -12,10 +12,17 @@ data = {
     "join_btn": "Apply",
     "join_tip": "Please sigh up before May 18,2016",
     "partner_page": {
+        "special_partner_title": "Special Partner",
+        "title_sponsor_title": "Title Sponsor",
         "strategic_partner_title": "Strategic partners",
         "company_partner_title": "Commercial partners",
         "media_partner_title": "Media partners",
     },
+    "organizer_desc": "On July 20, 2016, TechBase, SoGal, Lean In China and Krspace, are proud to jointly host the Her"
+        " Startup Competition to showcase the creativity and strength of female entrepreneurs."
+        " Outstanding startups will be selected to receive support through funding, "
+        "cross-border education resources, and access to further business development opportunities "
+        "in order to promote the attainment of entrepreneurial success. ",
     "organizer_list": [
         {
             "name": "TechBase",

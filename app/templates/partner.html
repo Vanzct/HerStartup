@@ -17,12 +17,16 @@
             <ul>
                 <li><a href="/organizer">{{data.nav.organizer}}</a></li>
                 <li><a href="/partner" class="selected">{{data.nav.partner}}</a></li>
-                <li><a href="/">{{data.nav.home}}</a></li>
+                <li><a href="/review">{{data.nav.home}}</a></li>
                 <li><a href="/schedule">{{data.nav.schedule}}</a></li>
                 <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
                 <li><a href="/us">{{data.nav.us}}</a></li>
             </ul>
         </article>
+        <div id="language">
+            <p><a id="zh" href="/partner?language=zh">中文</a></p>
+            <p><a id="en" href="/partner?language=en">English</a></p>
+        </div>
     </section>
     <section class="content" id="page_organizer">
         <aside class="sub_nav">
@@ -34,6 +38,16 @@
         </aside>
         <article>
             <ul>
+                <li class="section_li">
+                    <h4 class="section_title">{{data.partner_page.special_partner_title}}</h4>
+                    <img class="partner_img" src="/static/img/special_partner.jpg">
+                </li>
+
+                <li class="section_li">
+                    <h4 class="section_title">{{data.partner_page.title_sponsor_title}}</h4>
+                    <img class="partner_img" src="/static/img/title_sponsor.jpg">
+                </li>
+
                 <li class="section_li">
                     <h4 class="section_title">{{data.partner_page.strategic_partner_title}}</h4>
                     <img class="partner_img" src="/static/img/strategic_partner.jpg">

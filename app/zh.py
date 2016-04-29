@@ -13,31 +13,40 @@ data = {
     "join_btn": "报名",
     "join_tip": "报名截止到2016年5月18日",
     "partner_page": {
+        "special_partner_title": U"指导单位",
+        "title_sponsor_title": U"冠名赞助",
         "strategic_partner_title": U"战略合作伙伴",
         "company_partner_title": U"企业合作伙伴",
         "media_partner_title": U"媒体合作伙伴",
     },
+    "organizer_desc": U"Her Startup女性科技互联网创业大赛是由TechBase她本营，Lean In China, SoGal及氪空间携手打造的一场地跨中国"
+                      U"、美国及东南亚的大型跨国女性创业大赛。Her Startup大赛旨在为全世界女性创业者提供展示交流的舞台，"
+                      U"促进更多优秀女性创业者及女性消费领域项目的成熟与发展。",
     "organizer_list": [
         {
             "name": U"TechBase她本营",
+            "logo": "techbase.jpg",
             "desc": U"国内首个专业女性科技创业平台。她本营融合媒体、社区以及加速器功能，"
                     U"致力于打造垂直化的女性科技创业生态圈，鼓励更多女性在科技互联网领域发挥力"
                     U"量帮助女性通过创造和实践来改变世界。"
         },
         {
             "name": U"SoGal",
+            "logo": "sogal.jpg",
             "desc": U"创立于洛杉矶的全球女性创业者和投资人平台，目前成员遍布20多个国家。"
                     U"SoGal通过大型活动交流、创业孵化、风险投资和资源对接，为年轻女性打通活跃线上线下社群，"
                     U"从而为世界培养和展现新生代女性力量。"
         },
         {
             "name": U"Lean In China",
+            "logo": "leanin.jpg",
             "desc": U"Lean In China是中国的Lean In组织。目标是鼓舞中国的年轻职业女性与大学女生树立自信，"
                     U"追求自我定义的目标与理想。我们通过在全国建立活跃的互助社区来支持女性的成长与发展，"
                     U"推广导师及互助文化，培养发展女性领导力。目前已在全国16个城市和40所高校成立了Lean In China圈子和分会。"
         },
         {
             "name": U"氪空间",
+            "logo": "krspace.jpg",
             "desc": U"氪空间是36氪旗下，以联合办公为载体的创业服务平台。目前已经在北京、深圳、上海、杭州、天津、成都、"
                     U"福州等城市设点，为全球的创业者提供高性价比的极致办公体验和全方位的深度创业服务，"
                     U"倡导共享的价值理念和开放的社群氛围，立志为创业者提供最好的产品和服务。"
