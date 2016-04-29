@@ -26,6 +26,7 @@ data = {
     "organizer_list": [
         {
             "name": "TechBase",
+            "logo": "techbase.jpg",
             "desc": "TechBase is one of the first platforms in China dedicated solely to serving the professional "
 			"development of women working in innovative technological industries. Through the integration of media, "
 			"community, and accelerators, the organization builds a vertical ecosystem of female entrepreneurs and "
@@ -34,6 +35,7 @@ data = {
         },
         {
             "name": "SoGal",
+            "logo": "sogal.jpg",
             "desc": "SoGal is a platform to empower the next generation of entrepreneurs and investors. Established "
 			"in Los Angeles, it currently supports a network of members spread across over 20 countries. Hosting events "
 			"and conferences, providing access to venture capital and resources, and serving as an outlet for like-minded "
@@ -42,6 +44,7 @@ data = {
         },
         {
             "name": "Lean In China",
+            "logo": "leanin.jpg",
             "desc": "Lean In China seeks to empower Chinese women to pursue their goals and aspirations. Through the development of"
 			"active communities for women to thrive across China, promoting a culture of mentorship, leadership and mutual support. "
 			"As a professional development platform, Lean In China organizes events, seminars, training and mentorship programs. At "
@@ -50,6 +53,7 @@ data = {
         },
         {
             "name": "Krspace",
+            "logo": "krspace.jpg",
             "desc": "Krspace is a service platform under 36Kr based on co-working space service for startup companies. Now it has branches "
 			"in Beijing, Shenzhen, Shanghai, Hangzhou, Tianjin, Chengdu, Fuzhou and more cities, providing excellent service for startups and "
 			"encouraging an open community atmosphere. Now, Krspace has accelerated 101 startups, 97% successfully got investment, the total "

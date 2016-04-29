@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="nav">
+        <a class="logos">
+            <span class="techbase logo"></span>
+            <span class="sogal logo"></span>
+            <span class="leanin logo"></span>
+            <span class="krspace logo"></span>
+        </a>
+        <article class="nav_content">
+            <ul>
+                <li><a href="/organizer">{{data.nav.organizer}}</a></li>
+                <li><a href="/partner">{{data.nav.partner}}</a></li>
+                <li><a href="/review">{{data.nav.home}}</a></li>
+                <li><a href="/schedule" class="selected">{{data.nav.schedule}}</a></li>
+                <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
+                <li><a href="/us">{{data.nav.us}}</a></li>
+            </ul>
+        </article>
+        <div id="language">
+            <p><a id="zh" href="/schedule?language=zh">中文</a></p>
+            <p><a id="en" href="/schedule?language=en">English</a></p>
+        </div>
+    </section>
+    <section class="content" id="page_match">
+
+        <section id="timeline" class="cd-container">
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">
+                    Before May 18
+                </a>
+                <div class="content">
+                    <h5 class="name">Registration, submission<br>and early screening</h5>
+                </div>
+            </div>
+
+			
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">May 27</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Interview Round 1(Beijing)</h5>
+                    </div> 
+                </div>
+            </div>
+			<div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">May 28</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Interview Round 1(Hangzhou)</h5>
+                    </div> 
+                </div>
+            </div>
+			<div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">May 29</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Interview Round 1(Chengdu)</h5>
+                    </div> 
+                </div>
+            </div>
+			<div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">June 4</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Interview Round 1(Shenzhen)</h5>
+                    </div> 
+                </div>
+            </div>
+			
+			<div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">June 5</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Interview Round 1(Guangzhou)</h5>
+                    </div> 
+                </div>
+            </div>
+			
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">June 18</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">China Competition </h5>
+                    </div>
+                    <h4 class="title">Competition Schedule</h4>
+                    <ul>
+                        <li>13:30-14:00 Opening Ceremony</li>
+                        <li>14:00-15:30 Presentation Round 1</li>
+                        <li>15:30-17:00 Presentation Round 2</li>
+                        <li>17:00-17:30 Presentation Round 3</li>
+                        <li>17:30-18:00 Closing Ceremony</li>
+                        <li>18:00-20:00 Networking</li>
+                    </ul>
+                    <p>5-minute presentation, 10-minute judges Q&A, 80 minutes for 5 team presentations, 10-minute break</p>
+                </div>
+            </div>
+
+            <!--<div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+
+                <a class="datetime">6月XX日(未确定)</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">美国场决赛</h5>
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">July 18 - July 19</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Entrepreneurial Bootcamp in US</h5>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>Day 1</p>
+                            <p class="">
+                                <span class="am_pm">AM</span>
+                                <span class="action">Keynote presentation: Why entrepreneurship?</span>
+                            </p>
+                            <p class="">
+                                <span class="am_pm">PM</span>
+                                <span class="action">Activity with invited guests</span>
+                            </p>
+
+                        </li>
+                        <li>
+                            <p>Day 2</p>
+                            <p class="leflf">
+                                <span class="am_pm">AM</span>
+                                <span class="action">Fast & Efficient Business Development</span>
+                            </p>
+                            <p class="righ">
+                                <span class="am_pm">PM</span>
+                                <span class="action">The Secrets of Unicorn Companies</span>
+                            </p>
+
+                        </li>
+                    </ul>
+					<p>Educational partners are: Stanford Graduate School of Business, Draper University, Y Combinator, 500 Startups</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">July 20</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Final Competition</h5>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <p class="logo-line">
+                    <a class="logo"></a>
+                </p>
+                <a class="datetime">July 21 - July 22</a>
+                <div class="content">
+                    <div class="nnn">
+                        <h5 class="name">Visit to Companies in SV</h5>
+                        <img class="" src="/static/img/schedule/guigu.jpg">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+</html>
