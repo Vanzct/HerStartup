@@ -10,6 +10,8 @@ data = {
         "us": U"关于我们",
         "partner": U"合作伙伴",
     },
+    "join_btn": "报名",
+    "join_tip": "报名截止到2016年5月18日",
     "partner_page": {
         "strategic_partner_title": U"战略合作伙伴",
         "company_partner_title": U"企业合作伙伴",

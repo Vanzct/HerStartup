@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>大赛</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 <body>
     <section class="nav">
@@ -22,10 +23,10 @@
                 <li><a href="/sponsor">{{data.nav.sponsor}}</a></li>
                 <li><a href="/us">{{data.nav.us}}</a></li>
             </ul>
-            <p id="language">
-                <a id="zh">中文</a>
-                <a id="en">English</a>
-            </p>
+            <div id="language">
+                <p><a id="zh" href="/?language=zh">中文</a></p>
+                <p><a id="en" href="/?language=en">English</a></p>
+            </div>
 
         </article>
     </section>
@@ -89,10 +90,25 @@
         </section>
     </div>
 
-    <div class="join">
-        <a class="join_btn" href="http://form.mikecrm.com/13Eqhd#rd">报名</a>
-        <span>报名截止到2016年5月18日</span>
-        <a class="close"><img src="/static/img/icons/close.png"></a>
+    <div class="join" id="join_line">
+        <a class="join_btn" href="http://form.mikecrm.com/13Eqhd#rd">{{data.join_btn}}</a>
+        <span>{{data.join_tip}}</span>
+        <a id="close"><img src="/static/img/icons/close.png"></a>
     </div>
+
+<script type="text/javascript">
+
+    document.getElementById("close").addEventListener("click", function(){
+    console.log("zh");
+        document.getElementById("join_line").style.visibility="hidden";
+    });
+    /*
+    document.getElementById("en").addEventListener("click", function(){
+        document.cookie = "language=en;";
+        location = location.href.split("?")[0] + "?language=en";
+    });
+    */
+</script>
 </body>
+
 </html>

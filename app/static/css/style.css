@@ -35,13 +35,14 @@ p, h1, h2, h4, h5, a, span{
     top: 220px;
     right: 10px;
 }
-#language a{
+#language p{
     display: block;
     background: #eee;
     width: 80px;
     margin-bottom: 10px;
     padding: 10px;
     text-align: center;
+    z-index: 100000;
 }
 .nav{
     position: relative;
@@ -114,8 +115,9 @@ p, h1, h2, h4, h5, a, span{
 
 .content{
     position: relative;
-    width: 100%;
-    padding:30px 10%;
+    width: 80%;
+    left: 10%;
+    padding:30px 0%;
 }
 .content h1{
     font-size: 2.0em;
@@ -262,10 +264,10 @@ p, h1, h2, h4, h5, a, span{
 .join span{
     color: #fff;
 }
-.join .close{
+.join #close{
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 20px;
+    //top: 15px;
 
 }
 .join img{
@@ -341,7 +343,7 @@ Main components
 
 #timeline  .item:nth-child(odd) .content {
     position: relative;
-    margin-left: 50%;
+    margin-left: 40%;
     padding: 1em;
 }
 #timeline  .item:nth-child(even) .content {
