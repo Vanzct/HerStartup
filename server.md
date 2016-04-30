@@ -30,6 +30,7 @@ git pull
 5.查看服务进程
 lsof -i:5000
 出现以下内容
+
     uwsgi   13728 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
     uwsgi   13731 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
     uwsgi   13732 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
