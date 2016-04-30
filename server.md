@@ -1,6 +1,7 @@
 服务器列表
     47.90.19.96 (公), 10.24.186.7(内) 正式服务器
     =====================================================
+
     CPU-1核 内存：1G 网络：1Mbps 硬盘：40GB SSD
     已安装服务：git nginx python-pip
 
@@ -29,9 +30,9 @@ git pull
 5.查看服务进程
 lsof -i:5000
 出现以下内容
-uwsgi   13728 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
-uwsgi   13731 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
-uwsgi   13732 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
+    uwsgi   13728 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
+    uwsgi   13731 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
+    uwsgi   13732 root    3u  IPv4 249428      0t0  TCP localhost:5000 (LISTEN)
 
 13728 就是主进程ID
 
