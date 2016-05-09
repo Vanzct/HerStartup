@@ -247,7 +247,7 @@ p, h1, h2, h4, h5, a, span{
 
 }
 .img_section img{
-    width: 60%;
+    width: 100%;
 }
 .img_section .desc{
     text-align: left;
