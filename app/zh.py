@@ -19,7 +19,7 @@ data = {
         "company_partner_title": U"企业合作伙伴",
         "media_partner_title": U"媒体合作伙伴",
     },
-    "organizer_desc": U"Her Startup女性科技互联网创业大赛是由TechBase她本营，Lean In China, SoGal及氪空间携手打造的一场地跨中国"
+    "organizer_desc": U"星桥腾飞Her Startup女性科技互联网创业大赛是由TechBase她本营，Lean In China, SoGal及氪空间携手打造的一场地跨中国"
                       U"、美国及东南亚的大型跨国女性创业大赛。Her Startup大赛旨在为全世界女性创业者提供展示交流的舞台，"
                       U"促进更多优秀女性创业者及女性消费领域项目的成熟与发展。",
     "organizer_list": [
